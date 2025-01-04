@@ -233,6 +233,12 @@ export const summary = {
             tag: "Website App",
             _id: "65c3535476ed5c48f9440973",
           },
+          {
+            title: "Blog App Admin Dashboard",
+            date: "2024-02-08T00:00:00.000Z",
+            tag: "Website App",
+            _id: "65c3535476ed5c48f9440974",
+          },
         ],
         createdAt: "2024-02-08T04:59:34.826Z",
         updatedAt: "2024-02-09T06:51:15.005Z",
@@ -588,7 +594,7 @@ export const summary = {
       total: 224,
     },
   ];
-  
+  //add colour to the chartData
   export const tasks = [
     {
       _id: "65c5f12ab5204a81bde866a9",
@@ -636,7 +642,7 @@ export const summary = {
     },
     {
       _id: "65c5d547660756f6fd453a7a",
-      title: "Duplicate - Duplicate - Review Code Changes",
+      title: "Duplicate - Duplicate - Review Code Changes ",
       date: "2024-02-09T00:00:00.000Z",
       priority: "medium",
       stage: "in progress",
