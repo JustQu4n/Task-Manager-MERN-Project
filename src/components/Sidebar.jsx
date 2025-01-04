@@ -53,7 +53,7 @@ const linkData = [
 const Sidebar = () => {
   const { user } = useSelector((state) => state.auth);
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch;
   const location = useLocation();
 
   const path = location.pathname.split("/")[1];
