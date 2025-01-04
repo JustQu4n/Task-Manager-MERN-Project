@@ -109,12 +109,12 @@ const UserTable = ({ users }) => {
     <tr className='border-b border-gray-200  text-gray-800 hover:bg-rose-400/10'>
       <td className='py-2'>
         <div className='flex items-center gap-3'>
-          <div className='w-9 h-9 rounded-full text-white flex items-center justify-center text-sm bg-violet-700'>
-            <span className='text-center'>{getInitials(user?.name)}</span>
+          <div className='w-9 h-9 rounded-full text-white flex items-center justify-center text-sm bg-blue-700'>
+            <span className='text-center text-pretty'>{getInitials(user?.name)}</span>
           </div>
 
           <div>
-            <p className='font-semibold text-lg'> {user.name}</p>
+            <p className='font-semibold text-base'> {user.name}</p>
             <span className='text-xs text-black'>{user?.role}</span>
           </div>
         </div>
@@ -123,7 +123,7 @@ const UserTable = ({ users }) => {
       <td>
         <p
           className={clsx(
-            "w-fit px-3 py-1 rounded-full text-sm text-white",
+            "w-fit px-2 py-1 rounded-full text-sm text-white",
             user?.isActive ? "bg-green-600" : "bg-red-600"
           )}
         >
@@ -183,7 +183,7 @@ const Dashboard = () => {
     return (
       <div className='w-full h-32 bg-white p-5 shadow-md rounded-md flex items-center justify-between'>
         <div className='h-full flex flex-1 flex-col justify-between'>
-          <p className='text-base text-gray-600'>{label}</p>
+          <p className='text-base text-gray-800'>{label}</p>
           <span className='text-2xl font-semibold'>{count}</span>
           <span className='text-sm text-gray-400'>{"110 last month"}</span>
         </div>
@@ -194,7 +194,7 @@ const Dashboard = () => {
             bg
           )}
         >
-          {icon}
+        <p className='text-2xl'>{icon}</p>
         </div>
       </div>
     );
@@ -208,14 +208,14 @@ const Dashboard = () => {
          ))
         }
       </div>
-      <div className='w-full bg-white my-16 p-4 rounded shadow-sm'>
+      <div className='w-full bg-white my-10 p-4 rounded shadow-sm'>
         <h4 className='text-xl text-gray-600 font-semibold'>
           Chart by Priority
         </h4>
         <Chart />
       </div>
 
-      <div className='w-full flex flex-col md:flex-row gap-4 2xl:gap-10 py-8'>
+      <div className='w-full flex flex-col md:flex-row gap-4 2xl:gap-10 py-4'>
         {/* /left */}
 
         <TaskTable tasks={summary.last10Task} />

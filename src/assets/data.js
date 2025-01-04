@@ -524,7 +524,7 @@ export const summary = {
     users: [
       {
         _id: "65c5f27fb5204a81bde86833",
-        name: "New User",
+        name: "Nguyễn Anh Quân",
         title: "Designer",
         role: "Developer",
         isActive: false,
@@ -573,19 +573,19 @@ export const summary = {
   export const chartData = [
     {
       name: "High",
-      total: 2400,
+      total: 50,
     },
     {
       name: "Medium",
-      total: 2210,
+      total: 18
     },
     {
       name: "Normal",
-      total: 3210,
+      total: 80,
     },
     {
       name: "Low",
-      total: 2290,
+      total: 224,
     },
   ];
   
