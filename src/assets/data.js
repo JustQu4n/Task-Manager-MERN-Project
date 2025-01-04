@@ -527,8 +527,8 @@ export const summary = {
         name: "New User",
         title: "Designer",
         role: "Developer",
-        isActive: true,
-        createdAt: "2024-02-09T09:38:07.765Z",
+        isActive: false,
+        createdAt: "2025-01-09T09:38:07.765Z",
       },
       {
         _id: "65c3176a0fd860f958baa099",

@@ -4,10 +4,13 @@ import {
   MdKeyboardArrowDown,
   MdKeyboardArrowUp,
   MdKeyboardDoubleArrowUp,
+  MdTaskAlt
 } from "react-icons/md";
-import { LuClipboard } from 'react-icons/lu';
-import { FaNewspaper, FaUsers } from "react-icons/fa";
+import { SiGoogletasks } from "react-icons/si";
 import { FaArrowsToDot } from "react-icons/fa6";
+import { SiProgress } from "react-icons/si";
+import { GrTasks } from "react-icons/gr";
+import { FaTasks } from "react-icons/fa";
 import moment from "moment";
 import { summary } from "../assets/data";
 import clsx from "clsx";
@@ -34,7 +37,7 @@ const TaskTable = ({ tasks }) => {
   );
 
   const TableRow = ({ task }) => (
-    <tr className='border-b border-gray-300 text-gray-600 hover:bg-gray-300/10'>
+    <tr className='border-b border-gray-300 text-gray-800 hover:bg-blue-700/10'>
       <td className='py-2'>
         <div className='flex items-center gap-2'>
           <div
@@ -103,7 +106,7 @@ const UserTable = ({ users }) => {
   );
 
   const TableRow = ({ user }) => (
-    <tr className='border-b border-gray-200  text-gray-600 hover:bg-gray-400/10'>
+    <tr className='border-b border-gray-200  text-gray-800 hover:bg-rose-400/10'>
       <td className='py-2'>
         <div className='flex items-center gap-3'>
           <div className='w-9 h-9 rounded-full text-white flex items-center justify-center text-sm bg-violet-700'>
@@ -111,7 +114,7 @@ const UserTable = ({ users }) => {
           </div>
 
           <div>
-            <p> {user.name}</p>
+            <p className='font-semibold text-lg'> {user.name}</p>
             <span className='text-xs text-black'>{user?.role}</span>
           </div>
         </div>
@@ -120,11 +123,11 @@ const UserTable = ({ users }) => {
       <td>
         <p
           className={clsx(
-            "w-fit px-3 py-1 rounded-full text-sm",
-            user?.isActive ? "bg-lime-300" : "bg-yellow-100"
+            "w-fit px-3 py-1 rounded-full text-sm text-white",
+            user?.isActive ? "bg-green-600" : "bg-red-600"
           )}
         >
-          {user?.isActive ? "Active" : "Disabled"}
+          {user?.isActive ? "Online" : "Offline"}
         </p>
       </td>
       <td className='py-2 text-sm'>{moment(user?.createdAt).fromNow()}</td>
@@ -151,28 +154,28 @@ const Dashboard = () => {
       _id: "1",
       label: "TOTAL TASK",
       total: summary?.totalTasks || 0,
-      icon: <FaNewspaper />,
+      icon: <GrTasks />,
       bg: "bg-[#1d4ed8]",
     },
     {
       _id: "2",
       label: "COMPLTED TASK",
       total: totals["completed"] || 0,
-      icon: <MdAdminPanelSettings />,
+      icon: <SiGoogletasks />,
       bg: "bg-[#0f766e]",
     },
     {
       _id: "3",
       label: "TASK IN PROGRESS ",
       total: totals["in progress"] || 0,
-      icon: <LuClipboard />,
+      icon: <SiProgress />,
       bg: "bg-[#f59e0b]",
     },
     {
       _id: "4",
       label: "TODOS",
       total: totals["todo"],
-      icon: <FaArrowsToDot />,
+      icon: <FaTasks />,
       bg: "bg-[#be185d]" || 0,
     },
   ];
@@ -187,7 +190,7 @@ const Dashboard = () => {
 
         <div
           className={clsx(
-            "w-10 h-10 rounded-full flex items-center justify-center text-white",
+            "w-14 h-14 rounded-full flex items-center justify-center text-white",
             bg
           )}
         >
